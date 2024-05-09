@@ -1,7 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
-import { MR_HOPE_AVATAR } from "./logo.js";
 
 export default hopeTheme({
   // 是否在导航栏内显示仓库链接，默认为 `true`
