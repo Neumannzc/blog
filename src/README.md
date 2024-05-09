@@ -9,8 +9,8 @@ heroImage: /assets/site/body.png
 heroText: Cafe Babe
 heroAlt: logo走丢了
 tagline: 知之 - 行之 - 得之
-bgImage: assets/images/back-ground.jpeg
-heroFullScreen: true
+bgImage: assets/images/back-ground.jpg
+# heroFullScreen: true
 projects:
   - icon: https://v2.vuepress.vuejs.org/images/hero.png
     name: vuepress

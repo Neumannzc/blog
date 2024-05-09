@@ -9,25 +9,21 @@ export default navbar([
     children: [
       {
         text: "后端",
-        icon: "pen-to-square",
         prefix: "backend/",
         children: ["README.md"],
       },
       {
         text: "前端",
-        icon: "pen-to-square",
         prefix: "frontend/",
         children: ["README.md"],
       },
       {
         text: "服务器",
-        icon: "pen-to-square",
         prefix: "server/",
         children: ["README.md"],
       },
       {
         text: "ubuntu",
-        icon: "pen-to-square",
         prefix: "ubuntu/",
         children: ["README.md"],
       },

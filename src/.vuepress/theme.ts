@@ -11,7 +11,7 @@ export default hopeTheme({
 
   author: {
     name: "Cafe Babe",
-    url: "https://www.baidu.com",
+    url: "https://gitee.com/z517890027",
   },
 
   iconAssets: "fontawesome-with-brands",

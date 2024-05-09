@@ -1,11 +1,12 @@
 ---
 title: PageHelper的使用
 date: 2024-05-07
-author: Cafe Babe
+icon: dragon
 category:
   - 后端
 tag:
-  - 分页工具
+  - 框架
+order: 302
 ---
 
 PageHelper是一个查询列表时的自动分页工具

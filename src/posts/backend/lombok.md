@@ -1,11 +1,12 @@
 ---
 title: lombok的使用
 date: 2024-05-07
-author: Cafe Babe
+icon: dragon
 category:
   - 后端
 tag:
-  - lombok
+  - 开发示例
+order: 120
 ---
 
 [lombok](https://projectlombok.org/) 是一个 java 库，它会自动插入您的编辑器和构建工具，为您的 Java 增添趣味。

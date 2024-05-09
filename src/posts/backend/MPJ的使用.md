@@ -1,11 +1,12 @@
 ---
 title: MybatisPlusJoin的使用
 date: 2024-05-07
-author: Cafe Babe
+icon: dragon
 category:
   - 后端
 tag:
-  - MPJ
+  - 框架
+order: 301
 ---
 
 [MyBatis-Plus-Join](https://mybatisplusjoin.com/) (opens new window)（简称 MPJ）是一个 MyBatis-Plus (opens new window)的增强工具，在 MyBatis-Plus 的基础上只做增强不做改变，为简化开发、提高效率而生。
