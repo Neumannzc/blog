@@ -40,8 +40,8 @@ export default navbar([
     ]
   },
   { 
-    text: "官网链接", 
+    text: "官网和文档", 
     icon: "paperclip", 
-    link: "/posts/other/官网链接" 
+    link: "/posts/other/官网和文档链接" 
 },
 ]);
