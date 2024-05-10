@@ -13,6 +13,11 @@ export default navbar([
         children: ["README.md"],
       },
       {
+        text: "数据库",
+        prefix: "sql/",
+        children: ["README.md"],
+      },
+      {
         text: "前端",
         prefix: "frontend/",
         children: ["README.md"],
@@ -25,6 +30,11 @@ export default navbar([
       {
         text: "ubuntu",
         prefix: "ubuntu/",
+        children: ["README.md"],
+      },
+      {
+        text: "更多",
+        prefix: "other/",
         children: ["README.md"],
       },
     ]

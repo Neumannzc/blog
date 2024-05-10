@@ -2,6 +2,7 @@
 title: 服务器目录
 article: false # 不是文章
 index: false # 不是索引
+icon: earth-americas
 ---
 
 这是服务器目录

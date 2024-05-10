@@ -1,0 +1,104 @@
+---
+title: 命令(centos）
+date: 2024-05-10
+icon: user-secret
+category:
+  - 服务器
+tag:
+  - linux命令
+order: 200
+---
+
+这些linux运维命令，你都知道吗 :vampire_man: :vampire_man: :vampire_man:
+
+<!-- more -->
+
+## 一、防火墙
+
+``` {2,5,8,11,14}
+// 查看防火墙状态
+firewall-cmd --state
+
+// 查看已开启的端口信息
+firewall-cmd --list-ports
+
+// 停止命令
+systemctl stop firewalld.service
+
+// 启动命令
+systemctl start firewalld.service
+
+// 重启防火墙
+systemctl restart firewalld.service
+```
+
+## 二、开放端口
+
+```{2,5}
+// 开放端口
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+
+// 重启防火墙
+systemctl restart firewalld.service
+```
+
+## 三、关闭端口
+
+```{2,5,8,11}
+// 使用 netstat 命令列出占用 8801 端口的进程
+sudo netstat -tunlp | grep 8801
+
+// 杀死占用 8801 端口的进程，其中 PID 为进程 ID
+sudo kill <PID>
+
+// 关闭 8801 端口
+sudo firewall-cmd --zone=public --remove-port=8801/tcp --permanent
+
+// 重启防火墙
+systemctl restart firewalld.service
+```
+
+## 四、docker
+
+### 4.1、运行mimio
+
+- 9000端口控制台 9090端口文件上传下载
+
+```
+// 运行docker
+docker run -p 9000:9000 -p 9090:9090 --name=minio --restart=always -d --privileged=true -e "MINIO_ROOT_USER=admin" -e "MINIO_ROOT_PASSWORD=admin123456" -v /mydata/minio/data:/data -v /mydata/minio/config:/root/.minio  minio/minio server /data --console-address ":9000" --address ":9090"
+```
+
+### 4.2、运行mysql
+
+```
+// 创建文件夹
+mkdir mydata
+
+// 创建 mydata/mysql/conf、mydata/mysql/logs、mydata/mysql/mysql文件夹
+	
+// 运行docker
+docker run  --name mysql --restart=always -d -p 3306:3306 -v /mydata/mysql/conf:/etc/mysql/conf.d -v /mydata/mysql/logs:/var/log/mysql -v /mydata/mysql/mysql:/var/lib/mysql -e  MYSQL_ROOT_PASSWORD=ja8wnBVScthk mysql:5.7
+
+// 修改远程密码	
+set password for 'root' = password('12345');
+
+// 修改本地密码
+set password for 'root'@'localhost' = password('12345');
+```
+
+### 4.3、运行nacos
+
+```
+// 运行docker
+docker run --env MODE=standalone --name nacos --restart=always  -d -p 8848:8848 nacos/nacos-server:1.2.0
+```
+
+### 4.4、运行redis	
+
+```
+// 运行docker
+docker run --rm -d --name redis -p 6379:6379 redis --requirepass "123456"
+	
+```
+

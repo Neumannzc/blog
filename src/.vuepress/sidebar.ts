@@ -10,6 +10,13 @@ export default sidebar({
       children: "structure"
     },
     {
+      text: "数据库",
+      icon: "database",
+      prefix: "posts/sql",
+      collapsible: true,
+      children: "structure"
+    },
+    {
       text: "前端",
       icon: "desktop",
       collapsible: true,
@@ -30,7 +37,13 @@ export default sidebar({
       collapsible: true,
       children: "structure"
     },
-    
+    {
+      text: "更多",
+      icon: "infinity",
+      prefix: "posts/other",
+      collapsible: true,
+      children: "structure"
+    },    
     "intro",
   ],
 });

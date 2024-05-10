@@ -12,6 +12,15 @@ tagline: 知之 - 行之 - 得之
 bgImage: assets/images/back-ground.jpg
 # heroFullScreen: true
 projects:
+  - icon: https://plus.hutool.cn/images/hutool.svg
+    name: hutool
+    desc: 小而全的Java工具类库
+    link: https://hutool.cn/
+  - icon: https://www.runoob.com/wp-content/themes/runoob/assets/img/runoob-logo.png
+    name: 菜鸟教程
+    desc: 菜鸟教程
+    link: https://www.runoob.com/
+
   - icon: https://v2.vuepress.vuejs.org/images/hero.png
     name: vuepress
     desc: vuepress的官方文档
@@ -34,6 +43,10 @@ projects:
     name: 图标库
     desc: Font Awesome图标库
     link: https://fontawesome.com/icons
+  - icon: https://github.githubassets.com/images/icons/emoji/octocat.png
+    name: markdown表情符号
+    desc: emoji-cheat-sheet表情符号
+    link: https://github.com/ikatyang/emoji-cheat-sheet?tab=readme-ov-file#table-of-contents
 
   - icon: https://ydlunacommon-cdn.nosdn.127.net/31cf4b56e6c0b3af668aa079de1a898c.png
     name: 翻译

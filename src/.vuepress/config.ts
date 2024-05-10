@@ -10,7 +10,4 @@ export default defineUserConfig({
   description: "Cafe Babe的博客",
 
   theme,
-
-  // 和 PWA 一起启用
-  // shouldPrefetch: false,
 });

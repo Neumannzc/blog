@@ -1,12 +1,13 @@
 ---
 title: 安装JAVA开发环境
 date: 2024-05-07
-author: Cafe Babe
+icon: leaf
 category:
   - 软件安装
 tag:
   - java软件安装
 star: true
+order: 100
 ---
 
 - 该篇讲解了安装java开发环境，包括 `git`、`redis`、`mysql 5.7`、`maven`

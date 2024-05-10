@@ -2,6 +2,7 @@
 title: ubuntu目录
 article: false # 不是文章
 index: false # 不是索引
+icon: server
 ---
 
 这是ubuntu目录

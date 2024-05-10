@@ -1,11 +1,12 @@
 ---
 title: 安装node包管理工具nvm
 date: 2024-05-07
-author: Cafe Babe
+icon: leaf
 category:
   - 软件安装
 tag:
   - web软件安装
+order: 105
 ---
 
 [nvm](https://nvm.uihtm.com/) 是一个nodejs版本管理工具
