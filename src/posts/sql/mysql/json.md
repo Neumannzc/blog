@@ -1,9 +1,9 @@
 ---
-title: json串的查询
+title: json
 date: 2024-05-10
 icon: snowman
 category:
-  - 数据库
+  - mysql
 tag:
   - 数据库语法
 order: 102
