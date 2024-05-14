@@ -31,13 +31,6 @@ export default sidebar({
       children: "structure"
     },
     {
-      text: "ubuntu使用",
-      icon: "server",
-      prefix: "posts/ubuntu",
-      collapsible: true,
-      children: "structure"
-    },
-    {
       text: "更多",
       icon: "infinity",
       prefix: "posts/other",

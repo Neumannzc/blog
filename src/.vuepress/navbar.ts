@@ -28,11 +28,6 @@ export default navbar([
         children: ["README.md"],
       },
       {
-        text: "ubuntu",
-        prefix: "ubuntu/",
-        children: ["README.md"],
-      },
-      {
         text: "更多",
         prefix: "other/",
         children: ["README.md"],

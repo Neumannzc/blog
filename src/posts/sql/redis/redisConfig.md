@@ -1,8 +1,12 @@
 ---
 title: redis config
-article: false # 不是文章
-index: false # 不是索引
-icon: database
+date: 2024-05-11
+icon: snowman
+category:
+  - redis
+tag:
+  - redis配置
+order: 201
 ---
 
 ```

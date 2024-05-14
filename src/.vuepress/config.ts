@@ -3,6 +3,7 @@ import theme from "./theme.js";
 
 export default defineUserConfig({
 
+  // base: "/",
   base: "/blog/",
 
   lang: "zh-CN",
