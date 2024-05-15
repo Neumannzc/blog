@@ -1,5 +1,5 @@
 ---
-title: 安装JDK
+title: 安装jdk
 date: 2024-05-14
 icon: leaf
 category:
@@ -22,35 +22,34 @@ order: 100
 
 ## 一、下载并安装JDK
 
-```
+``` shell
 #更新库
-apt update
+sudo apt update
 
 #查看jdk版本
-apt search openjdk
+sudo apt search openjdk
 
 #安装jdk
-apt install openjdk-8-jdk
-apt install openjdk-17-jdk
+sudo apt install openjdk-8-jdk
+sudo apt install openjdk-17-jdk
 ```
 
 ## 二、查看已经安装的JDK版本
 
-```
+``` shell
 #查看已存在安装版本的jdk
 update-alternatives --list java
-
 ```
 
 ## 三、选择已经安装的JDK版本
 
-```
+``` shell
 #选择要使用的版本
 update-alternatives --config java
 ```
 
 ## 四、查看当前java版本
 
-```
+``` shell
 java -version
 ```
