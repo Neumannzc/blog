@@ -6,7 +6,7 @@ category:
   - redis
 tag:
   - redis配置
-order: 201
+index: false
 ---
 
 ```
