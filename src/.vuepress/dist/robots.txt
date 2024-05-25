@@ -1,5 +1,0 @@
-
-User-agent:*
-Disallow:
-
-Sitemap: https://github.com/Neumannzc/blog/blog/sitemap.xml
