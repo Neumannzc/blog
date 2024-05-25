@@ -9,6 +9,10 @@ tag:
 order: 135
 ---
 
+想要对 Microsoft 进行操作，想要对 word 进行操作，那你可得看看这篇文章了
+
+<!-- more -->
+
 [poi](https://poi.apache.org/) 知道吧，Apache 出品的对 Microsoft 进行操作的 Java API :nerd_face:	
 
 但是你想使用它对具体的文档进行操作时，简直令人头疼 :face_with_spiral_eyes:	
@@ -23,7 +27,6 @@ order: 135
 
 多的不说了，咱就以操作word文档为例，直接上代码吧，大家自行进行比较 :zany_face:
 
-<!-- more -->
 
 ## 一、使用 poi 对word进行填充
 
@@ -375,5 +378,97 @@ void createTableAndFillData() throws Exception {
   OutputStream os = new FileOutputStream("template1_out.docx");
   //最终编译渲染并输出
   XWPFTemplate.compile(file).render(params).writeAndClose(os);
+}
+```
+
+### 2.6、循环填充（问答）
+
+先看效果
+
+``` :no-line-numbers
+问：第一个提问
+答：第一个回答 
+问：第二提问
+答：第二回答 
+问：第三提问
+答：第三回答 
+```
+
+填充的模板中添加（如果想要 **问答的内容** 加下划线的话，直接在 `{{=#this}}` 的下方加上即可）
+
+``` :no-line-numbers
+{{?list}}
+{{?_is_even_item}}答：{{=#this}} {{/_is_even_item}}
+{{?_is_odd_item }}问：{{=#this}} {{/_is_odd_item }}
+{{/list}}
+```
+java中这样写
+
+``` java
+@Test
+void fillWord2() throws Exception {
+
+    ArrayList<String> list = new ArrayList<>();
+
+    list.add("第一个提问");
+    list.add("第一个回答");
+    list.add("第二提问");
+    list.add("第二回答");
+    list.add("第三提问");
+    list.add("第三回答");
+
+    Map<String, Object> map = new HashMap<>();
+    map.put("list", list);
+
+    XWPFTemplate template = XWPFTemplate.compile(PATH + "test2.docx")
+            .render(map);
+
+    template.writeAndClose(new FileOutputStream(PATH + "output2.docx"));
+}
+```
+
+### 2.6、循环填充（列表）
+
+先看效果
+
+``` :no-line-numbers
+1. 第一个提问
+2. 第一个回答
+3. 第二提问
+4. 第二回答
+5. 第三提问
+6. 第三回答
+```
+
+填充的模板中添加
+
+``` :no-line-numbers
+{{?list}}
+{{_index + 1}}. {{=#this}}
+{{/list}}
+```
+
+java中这样写
+
+``` java
+@Test
+void fillWord2() throws Exception {
+
+    ArrayList<String> list = new ArrayList<>();
+
+    list.add("第一个提问");
+    list.add("第一个回答");
+    list.add("第二提问");
+    list.add("第二回答");
+    list.add("第三提问");
+    list.add("第三回答");
+
+    Map<String, Object> map = new HashMap<>();
+    map.put("list", list);
+
+    XWPFTemplate template = XWPFTemplate.compile(PATH + "test2.docx")
+            .render(map);
+
+    template.writeAndClose(new FileOutputStream(PATH + "output2.docx"));
 }
 ```
