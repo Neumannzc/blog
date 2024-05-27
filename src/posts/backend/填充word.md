@@ -381,7 +381,7 @@ void createTableAndFillData() throws Exception {
 }
 ```
 
-### 2.6、循环填充（问答）
+### 2.7、循环填充（问答）
 
 先看效果
 
@@ -427,7 +427,7 @@ void fillWord2() throws Exception {
 }
 ```
 
-### 2.6、循环填充（列表）
+### 2.8、循环填充（列表）
 
 先看效果
 
@@ -470,5 +470,48 @@ void fillWord2() throws Exception {
             .render(map);
 
     template.writeAndClose(new FileOutputStream(PATH + "output2.docx"));
+}
+```
+
+### 2.9、列表
+
+效果这样的
+
+``` :no-line-numbers
+1.第一个提问
+2.第一个回答
+3.第二提问
+4.第二回答
+5.第三提问
+6.第三回答
+```
+
+填充的模板中添加
+``` :no-line-numbers
+{{*list}}
+```
+
+java中这样写
+
+``` java
+@Test
+void fillWord4() throws Exception {
+
+    NumberingRenderData renderData = Numberings.of(NumberingFormat.DECIMAL)
+            .addItem("第一个提问")
+            .addItem("第一个回答")
+            .addItem("第二提问")
+            .addItem("第二回答")
+            .addItem("第三提问")
+            .addItem("第三回答")
+            .create();
+
+    Map<String, Object> map = new HashMap<>();
+    map.put("list", renderData);
+
+    XWPFTemplate template = XWPFTemplate.compile(PATH + "test3.docx")
+            .render(map);
+
+    template.writeAndClose(new FileOutputStream(PATH + "output3.docx"));
 }
 ```
