@@ -6,7 +6,7 @@ category:
   - redis
 tag:
   - redis的使用
-order: 300
+order: 310
 ---
 
 [jedis](https://github.com/redis/jedis) 是 [Redis](https://github.com/redis/redis) 的 Java 客户端，专为性能和易用性而设计。
