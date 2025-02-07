@@ -75,6 +75,9 @@ sudo vim /etc/bash.bashrc
 
 # 添加内容
 source /etc/profile.d/maven.sh
+
+# 当提示 /etc/profile.d/maven.sh 权限不足时,需要为其他用户添加读权限
+# sudo chmod o+r /etc/profile.d/maven.sh
 ```
 
 ### 3、创建本地maven仓库
