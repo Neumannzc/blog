@@ -37,20 +37,30 @@ cd 安装路径
 ./install.sh 
 ```
 
-## 五、添加源镜像
+## 五、配置环境
 
 ```
 vim ~/.bashrc
-
-# 添加源镜像地址
-export NVM_NODEJS_ORG_MIRROR=http://nodejs.org/dist
 
 export NVM_DIR="$HOME/.nvm/nvm-0.38.0"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
 
-## 六、重新加载配置
+## 六、切换镜像源
+
+```
+# 阿里云镜像
+nvm npm_mirror https://npmmirror.com/mirrors/npm/
+nvm node_mirror https://npmmirror.com/mirrors/node/
+
+# 腾讯云镜像
+nvm npm_mirror http://mirrors.cloud.tencent.com/npm/
+nvm node_mirror http://mirrors.cloud.tencent.com/nodejs-release/
+```
+
+
+## 七、重新加载配置
 
 ```
 source ~/.bashrc
