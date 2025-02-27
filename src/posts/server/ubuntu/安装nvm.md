@@ -15,13 +15,13 @@ order: 105
 
 ## 一、创建目录
 
-```
+```shell
 mkdir -p 安装路径
 ```
 
 ## 二、下载
 
-```
+```shell
 git clone https://github.com/nvm-sh/nvm.git 安装路径
 ```
 
@@ -33,13 +33,13 @@ cd 安装路径
 
 ## 四、安装
 
-```
+```shell
 ./install.sh 
 ```
 
 ## 五、配置环境
 
-```
+```shell
 vim ~/.bashrc
 
 export NVM_DIR="$HOME/.nvm/nvm-0.38.0"
@@ -49,7 +49,7 @@ export NVM_DIR="$HOME/.nvm/nvm-0.38.0"
 
 ## 六、切换镜像源
 
-```
+```shell
 # 阿里云镜像
 nvm npm_mirror https://npmmirror.com/mirrors/npm/
 nvm node_mirror https://npmmirror.com/mirrors/node/
@@ -62,7 +62,12 @@ nvm node_mirror http://mirrors.cloud.tencent.com/nodejs-release/
 
 ## 七、重新加载配置
 
-```
+```shell
 source ~/.bashrc
 ```
 
+## 八、制定默认版本
+
+```shell
+nvm alias default 16
+```

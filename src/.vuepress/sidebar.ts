@@ -3,6 +3,13 @@ import { sidebar } from "vuepress-theme-hope";
 export default sidebar({
   "/": [
     {
+      text: "项目",
+      icon: "mug-hot",
+      prefix: "posts/project",
+      collapsible: true,
+      children: "structure"
+    },
+    {
       text: "后端",
       icon: "mug-hot",
       prefix: "posts/backend",

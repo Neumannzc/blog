@@ -8,6 +8,11 @@ export default navbar([
     prefix: "/posts/",
     children: [
       {
+        text: "项目",
+        prefix: "project/",
+        children: ["README.md"],
+      },
+      {
         text: "后端",
         prefix: "backend/",
         children: ["README.md"],
