@@ -95,7 +95,7 @@ mkdir repository
 <!-- 2 数据源 -->
 <mirror>
       <id>nexus-aliyun</id>
-      <mirrorOf>central</mirrorOf>
+      <mirrorOf>*</mirrorOf>
       <name>Nexus aliyun</name>
       <url>http://maven.aliyun.com/nexus/content/groups/public</url>
 </mirror>
