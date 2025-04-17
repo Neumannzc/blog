@@ -1,5 +1,5 @@
 ---
-title: MybatisPlus的使用
+title: MybatisPlus
 date: 2024-05-07
 icon: dragon
 category:

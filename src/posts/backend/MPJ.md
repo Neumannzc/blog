@@ -1,5 +1,5 @@
 ---
-title: MybatisPlusJoin的使用
+title: MybatisPlusJoin
 date: 2024-05-07
 icon: dragon
 category:

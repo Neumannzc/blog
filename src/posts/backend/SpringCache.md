@@ -1,5 +1,5 @@
 ---
-title: Spring Cache的注解
+title: Spring Cache
 date: 2024-05-07
 icon: dragon
 category:

@@ -1,5 +1,5 @@
 ---
-title: lombok的使用
+title: lombok
 date: 2024-05-07
 icon: dragon
 category:

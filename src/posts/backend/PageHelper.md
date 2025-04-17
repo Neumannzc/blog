@@ -1,5 +1,5 @@
 ---
-title: PageHelper的使用
+title: PageHelper
 date: 2024-05-07
 icon: dragon
 category:
