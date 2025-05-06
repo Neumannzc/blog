@@ -102,6 +102,8 @@ public class UserService {
 - value：缓存名称空间（如 "users"）。
 - key：缓存键，可以使用 SpEL 表达式
 
+- tips: 当参数id可能为空时，需要添加为空的默认值 `@Cacheable(value = "users", key = "#id ?: 'defaultKey'")`
+
 #### 4.4.2 更新缓存（@CachePut）​
 
 用于更新缓存，无论缓存是否存在，都会执行方法并将结果存入缓存。常用于更新操作后刷新缓存。
