@@ -62,22 +62,24 @@ tar -zxvf apache-maven-3.6.1-bin.tar.gz
 ### 2、配置环境变量
 
 ```
-# 打开文件
+# 1. 打开文件
 sudo touch /etc/profile.d/maven.sh
 sudo vim /etc/profile.d/maven.sh
 
-# 添加内容
+# 2. 添加内容
 export MAVEN_HOME=/home/Cafe Babe/java/apache-maven-3.9.6
 export PATH=$PATH:$MAVEN_HOME/bin
 
-# 引用配置
-sudo vim /etc/bash.bashrc
+# 3. 设置权限
+sudo chmod 644 /etc/profile.d/maven.sh
 
-# 添加内容
-source /etc/profile.d/maven.sh
+# 4. 加载配置到当前用户环境 (不修改全局 bash.bashrc)
+echo "source /etc/profile.d/maven.sh" >> ~/.bashrc
+source ~/.bashrc
 
-# 当提示 /etc/profile.d/maven.sh 权限不足时,需要为其他用户添加读权限
-# sudo chmod o+r /etc/profile.d/maven.sh
+# 5. 验证安装
+mvn -version
+
 ```
 
 ### 3、创建本地maven仓库
