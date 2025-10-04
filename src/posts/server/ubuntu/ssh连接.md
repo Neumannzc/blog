@@ -74,11 +74,29 @@ ssh myserver
 
 ### 5. 常见问题解决
 1. **权限错误**：
-   ```bash
-   # 修复密钥权限
-   chmod 700 ~/.ssh
-   chmod 600 ~/.ssh/your-key.pem
-   ```
+```
+The authenticity of host '127.0.0.1 (127.0.0.1)' can't be established.
+ED25519 key fingerprint is SHA256:7gcjnV+RYqGhz4g4ELvm4WXHAO8clRs/iUFpFoYXKr8.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0664 for '/home/cafe/.ssh/your-key.pem' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/home/cafe/.ssh/your-key.pem": bad permissions
+root@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+```
+原因： ​​SSH 私钥文件权限设置过于宽松​​，导致 SSH 客户端出于安全考虑拒绝加载该密钥
+
+解决方法：
+```bash
+# 修复密钥权限
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/your-key.pem
+```
 
 2. **首次连接确认**：
    首次连接时会提示确认主机指纹，输入 `yes` 确认
